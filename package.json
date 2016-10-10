@@ -1,0 +1,23 @@
+{
+  "name": "gettpl",
+  "version": "1.0.0",
+  "description": "lightweight js simple templating",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/romuleald/getTpl.git"
+  },
+  "keywords": [
+    "js",
+    "templating"
+  ],
+  "author": "Antoine Sanchez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/romuleald/getTpl/issues"
+  },
+  "homepage": "https://github.com/romuleald/getTpl#readme"
+}
