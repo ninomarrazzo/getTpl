@@ -32,4 +32,4 @@ var getTpl = (function () {
     return gettpl;
 
 })();
-export default getTpl;
+module.exports = getTpl;
