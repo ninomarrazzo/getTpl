@@ -1,6 +1,6 @@
 {
   "name": "gettpl",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "lightweight js simple templating",
   "main": "index.js",
   "scripts": {
