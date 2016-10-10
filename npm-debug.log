@@ -1,0 +1,97 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Users\\antsan2\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'publish' ]
+2 info using npm@3.5.3
+3 info using node@v4.6.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: 'D:\\dev\\hum\\gettpl',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory C:\Users\antsan2\AppData\Roaming\npm-cache\gettpl\1.0.1\package.tgz not in flight; packing
+9 info lifecycle gettpl@1.0.1~prepublish: gettpl@1.0.1
+10 silly lifecycle gettpl@1.0.1~prepublish: no script for prepublish, continuing
+11 verbose tar pack [ 'C:\\Users\\antsan2\\AppData\\Roaming\\npm-cache\\gettpl\\1.0.1\\package.tgz',
+11 verbose tar pack   'D:\\dev\\hum\\gettpl' ]
+12 verbose tarball C:\Users\antsan2\AppData\Roaming\npm-cache\gettpl\1.0.1\package.tgz
+13 verbose folder D:\dev\hum\gettpl
+14 verbose addLocalTarball adding from inside cache C:\Users\antsan2\AppData\Roaming\npm-cache\gettpl\1.0.1\package.tgz
+15 silly cache afterAdd gettpl@1.0.1
+16 verbose afterAdd C:\Users\antsan2\AppData\Roaming\npm-cache\gettpl\1.0.1\package\package.json not in flight; writing
+17 verbose afterAdd C:\Users\antsan2\AppData\Roaming\npm-cache\gettpl\1.0.1\package\package.json written
+18 silly publish { name: 'gettpl',
+18 silly publish   version: '1.0.1',
+18 silly publish   description: 'lightweight js simple templating',
+18 silly publish   main: 'index.js',
+18 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+18 silly publish   repository:
+18 silly publish    { type: 'git',
+18 silly publish      url: 'git+https://github.com/romuleald/getTpl.git' },
+18 silly publish   keywords: [ 'js', 'templating' ],
+18 silly publish   author: { name: 'Antoine Sanchez' },
+18 silly publish   license: 'ISC',
+18 silly publish   bugs: { url: 'https://github.com/romuleald/getTpl/issues' },
+18 silly publish   homepage: 'https://github.com/romuleald/getTpl#readme',
+18 silly publish   readme: '# getTpl\r\n\r\ngetTpl provide a very simple HTML template\r\n\r\nIt will read a `<script id="mytpl" type="text/template"><span>{{ foo }}</span></script>`\r\n\r\nThen parsing via `getTpl(\'mytpl\', {foo:\'bar\'})`\r\n\r\nReturn: `<span>bar</span>`',
+18 silly publish   readmeFilename: 'README.md',
+18 silly publish   gitHead: '93f6e5c07a9a51c050f8783426537811cf5b5df4',
+18 silly publish   _id: 'gettpl@1.0.1',
+18 silly publish   _shasum: '856e9c1ee056974094b37e2cdc3af5bed75846e1',
+18 silly publish   _from: '.' }
+19 verbose getPublishConfig undefined
+20 silly mapToRegistry name gettpl
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry uri https://registry.npmjs.org/gettpl
+24 verbose publish registryBase https://registry.npmjs.org/
+25 silly publish uploading C:\Users\antsan2\AppData\Roaming\npm-cache\gettpl\1.0.1\package.tgz
+26 verbose request uri https://registry.npmjs.org/gettpl
+27 verbose request sending authorization for write operation
+28 info attempt registry request try #1 at 15:11:12
+29 verbose request using bearer token for auth
+30 verbose request id e2ec36a9db89125a
+31 http request PUT https://registry.npmjs.org/gettpl
+32 http 403 https://registry.npmjs.org/gettpl
+33 verbose headers { 'content-type': 'application/json',
+33 verbose headers   'cache-control': 'max-age=300',
+33 verbose headers   'content-length': '95',
+33 verbose headers   'accept-ranges': 'bytes',
+33 verbose headers   date: 'Mon, 10 Oct 2016 13:11:13 GMT',
+33 verbose headers   via: '1.1 varnish',
+33 verbose headers   connection: 'keep-alive',
+33 verbose headers   'x-served-by': 'cache-cdg8735-CDG',
+33 verbose headers   'x-cache': 'MISS',
+33 verbose headers   'x-cache-hits': '0',
+33 verbose headers   'x-timer': 'S1476105072.261828,VS0,VE991',
+33 verbose headers   vary: 'Accept-Encoding' }
+34 verbose request invalidating C:\Users\antsan2\AppData\Roaming\npm-cache\registry.npmjs.org\gettpl on PUT
+35 error publish Failed PUT 403
+36 verbose stack Error: "You cannot publish over the previously published version 1.0.1." : gettpl
+36 verbose stack     at makeError (C:\Users\antsan2\AppData\Roaming\npm\node_modules\npm\node_modules\npm-registry-client\lib\request.js:264:12)
+36 verbose stack     at CachingRegistryClient.<anonymous> (C:\Users\antsan2\AppData\Roaming\npm\node_modules\npm\node_modules\npm-registry-client\lib\request.js:252:14)
+36 verbose stack     at Request._callback (C:\Users\antsan2\AppData\Roaming\npm\node_modules\npm\node_modules\npm-registry-client\lib\request.js:172:14)
+36 verbose stack     at Request.self.callback (C:\Users\antsan2\AppData\Roaming\npm\node_modules\npm\node_modules\request\request.js:198:22)
+36 verbose stack     at emitTwo (events.js:87:13)
+36 verbose stack     at Request.emit (events.js:172:7)
+36 verbose stack     at Request.<anonymous> (C:\Users\antsan2\AppData\Roaming\npm\node_modules\npm\node_modules\request\request.js:1035:10)
+36 verbose stack     at emitOne (events.js:82:20)
+36 verbose stack     at Request.emit (events.js:169:7)
+36 verbose stack     at IncomingMessage.<anonymous> (C:\Users\antsan2\AppData\Roaming\npm\node_modules\npm\node_modules\request\request.js:962:12)
+37 verbose statusCode 403
+38 verbose pkgid gettpl
+39 verbose cwd D:\dev\hum\gettpl
+40 error Windows_NT 6.1.7601
+41 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Users\\antsan2\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js" "publish"
+42 error node v4.6.0
+43 error npm  v3.5.3
+44 error code E403
+45 error "You cannot publish over the previously published version 1.0.1." : gettpl
+46 error If you need help, you may report this error at:
+46 error     <https://github.com/npm/npm/issues>
+47 verbose exit [ 1, true ]
