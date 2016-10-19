@@ -23,10 +23,10 @@ import getTpl from 'gettpl';
 
 * In your javascript, call the template with its id and **variables will be replaced via an object**
 ```javascript
-getTpl('my_template_id', { 
+getTpl({ 
     foo:'bar', 
     foo2:'bar2' 
-}); 
+}, 'my_template_id'); 
 ```
 
 Returns: 
