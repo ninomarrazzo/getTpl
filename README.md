@@ -1,9 +1,42 @@
 # getTpl
 
-getTpl provide a very simple HTML template
+Small script that provides a very simple HTML template for your javascript projects.
 
-It will read a `<script id="mytpl" type="text/template"><span>{{ foo }}</span></script>`
+## Installation
+On top of your javascript file :
+```javascript
+import getTpl from 'gettpl';
+```
 
-Then parsing via `getTpl('mytpl', {foo:'bar'})`
+## Usage 
+* The HTML template is in your HTML page (hidden) and contains variables to be replaced :
+```html
+<script id="my_template_id" type="text/template">
+    <span>
+        {{ foo }}
+    </span>
+    <p>
+        {{ foo2 }}
+    </p>
+</script>
+```
 
-Return: `<span>bar</span>`
+* In your javascript, call the template with its id and **variables will be replaced via an object**
+```javascript
+getTpl('my_template_id', { 
+    foo:'bar', 
+    foo2:'bar2' 
+}); 
+```
+
+Returns: 
+```html
+<span>
+    bar
+</span>
+<p>
+    bar2
+</p>
+```
+
+
