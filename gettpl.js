@@ -14,7 +14,7 @@ var getTpl = (function () {
      * @param {String} templateId HTML attribute id
      * @returns {string} HTMl template transformed
      */
-    var gettpl = function (data, templateId) {
+    return function gettpl(data, templateId, debug = false) {
         let templateHTML = getCache(templateId);
         if (getCache(templateId)) {
             templateHTML = getCache(templateId);
@@ -24,12 +24,12 @@ var getTpl = (function () {
             templateHTML = tpl.innerHTML;
             setCache(templateId, templateHTML);
         }
-        //
-        return templateHTML.replace(/{{([^}]*)}}/g, function (search, result) {
-            return data[result];
+        return templateHTML.replace(/{{ ?([^}]*) ?}}/g, function (search, result) {
+            result = result.trim();
+            debug && console.info(result, data[result]);
+            return data[result] || '';
         });
     };
-    return gettpl;
 
 })();
 module.exports = getTpl;
