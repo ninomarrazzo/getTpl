@@ -33,3 +33,21 @@ var getTpl = (function () {
 
 })();
 module.exports = getTpl;
+
+/*
+    return templateHTML.replace(/{(?:{|%) ?([^}]*) ?(?:%|})}/g, function (search, result) {
+      result = result.trim();
+      var itsExp = search.indexOf('{!') === 0;
+      // debug && console.info(result, data[result]);
+      if (itsExp) {
+        return eval('(' + result + ')');
+      } else {
+        if (result.indexOf('.') > 0) {
+          var obj_prop = result.split('.');
+          return data[obj_prop[0]][obj_prop[1]];
+        } else {
+          return data[result] || '';
+        }
+      }
+    });
+*/
